@@ -43,9 +43,10 @@
    Установите ```Rust```
     
     
-    ```
-      . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
-     ```
+  ```
+  . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
+   ```
+  
    
     
      
