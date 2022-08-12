@@ -1,6 +1,6 @@
 ## Установка ноды Sui
 
-   системные требования
+  системные требования
  
   (VPS/VDS/DS) 
   
@@ -9,6 +9,9 @@
    - CPUs: 2
    - RAM: 8GB
    - Storage: 50GB
+   
+   
+##Подгодовка Сервера
   
    Обновить пакеты и систему
 
@@ -16,13 +19,15 @@
     sudo apt update 
   
     ```
+    
     ```
     sudo apt upgrade -y
+    
     ```
 
    установите дополнительные зависимости
 
-    ```
+   ```
     apt-get update \
     && apt-get install -y --no-install-recommends \
     tzdata \
@@ -34,7 +39,14 @@
     pkg-config \
     libclang-dev \
     cmake 
+  ```
+    
+    Установите ```Rust```
+    
     ```
+    . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
+    ```
+    
      
   Форкните [Репозиторий Sui](https://github.com/MystenLabs/sui)
   
@@ -85,8 +97,6 @@
  curl -fLJO https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
  ```
  
-source "$HOME/.cargo/env" создать директорию 
-
 запускаем ноду 
 cargo run --release --bin sui-node -- --config-path fullnode.yaml
 
@@ -99,7 +109,9 @@ nano /root/sui/fullnode.yaml
 
 поменяй ip на 0.0.0.0
 
-Создай сервичник
+Создайте сервисный фаил
+
+```
 sudo tee /etc/systemd/system/sui-node.service > /dev/null <<EOF 
 [Unit] 
 Description=sui-node 
@@ -113,30 +125,32 @@ LimitNOFILE=65535
 [Install] 
 WantedBy=multi-user.target 
 EOF
+```
+Рестартнуть Ноду
 
-
-sudo systemctl enable sui-node 
+```
+sudo systemctl enable sui-node
+```
+```
 sudo systemctl daemon-reload 
+```
+```
 sudo systemctl restart sui-node
-journalctl -u sui-node.service -f 
+
+```
+```
+journalctl -u sui-node.service -f
+```
 
 
 
 
-либо используя скрипт sed -i -e "s%db-path:.*%db-path: \"$HOME/.sui/db\"%; "\
-"s%metrics-address:.*%metrics-address: \"0.0.0.0:9184\"%; "\
-"s%json-rpc-address:.*%json-rpc-address: \"0.0.0.0:9000\"%; "\
-"s%genesis-file-location:.*%genesis-file-location: \"$HOME/.sui/genesis.blob\"%; " $HOME/.sui/fullnode.yaml
-
-
-. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh) установить раст
 
 
 
 
-sudo systemctl daemon-reload
-sudo systemctl enable suid
-sudo systemctl restart suid
+
+
 
 
 
