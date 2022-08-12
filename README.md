@@ -15,13 +15,14 @@
   
    Обновить пакеты и систему
 
-    ```
-    sudo apt update 
-    ```
+  ```
+  sudo apt update 
+  ```
     
-    ```
-    sudo apt upgrade -y
-    ```
+  ``` 
+  sudo apt upgrade -y
+  ```
+   
 
    Установим дополнительные зависимости
 
@@ -41,9 +42,10 @@
     
    Установите ```Rust```
     
-    ```
-    . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
-    ```
+     ```
+      . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
+     ```
+   
     
      
   Форкним [Репозиторий Sui](https://github.com/MystenLabs/sui)
