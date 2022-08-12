@@ -11,7 +11,7 @@
    - Storage: 50GB
    
    
-##Подгодовка Сервера
+## Подгодовка Сервера
   
    Обновить пакеты и систему
 
@@ -25,7 +25,7 @@
     
     ```
 
-   установите дополнительные зависимости
+   Установим дополнительные зависимости
 
    ```
     apt-get update \
@@ -41,39 +41,39 @@
     cmake 
   ```
     
-    Установите ```Rust```
+   Установите ```Rust```
     
     ```
     . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
     ```
     
      
-  Форкните [Репозиторий Sui](https://github.com/MystenLabs/sui)
+  Форкним [Репозиторий Sui](https://github.com/MystenLabs/sui)
   
   
   [![image.png](https://i.postimg.cc/gkMwLbjP/image.png)](https://postimg.cc/crn1PjfD)
   
   
-Клонируйте свой личный форк репозитория Sui на свой пк 
-Вместо ```YOUR-GITHUB-USERNAME``` Вставьте свой ник из Гитхаба
+Клонируем свой личный форк репозитория Sui на свой пк 
+Вместо ```YOUR-GITHUB-USERNAME``` Вставляем свой ник из Гитхаба
   
  ```
  git clone https://github.com/<YOUR-GITHUB-USERNAME>/sui.git
  ```
  
- Войдите в свой репозиторий
+ Войдем в свой репозиторий
  
  ```
  cd sui
  ```
  
- Создайте ветку с исходным репозиторием
+ Создаем ветку с исходным репозиторием
  
  ```
  git remote add upstream https://github.com/MystenLabs/sui
  ```
  
- Синхронизируйте свой форк
+ Синхронизируем свой форк
  
  ```
  git fetch upstream
@@ -97,19 +97,25 @@
  curl -fLJO https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
  ```
  
-запускаем ноду 
-cargo run --release --bin sui-node -- --config-path fullnode.yaml
-
-Открыть Nano
-nano /root/sui/fullnode.yaml
+Компилируем бинарные файлы (занимает долгое время) 
  
- и путь к genesis файлу поправь
+ ```
+cargo run --release --bin sui-node -- --config-path fullnode.yaml
+ ```
 
-/root/sui/genesis.blob
+Редактируем ```fullnode.yaml```
 
-поменяй ip на 0.0.0.0
+```
+nano /root/sui/fullnode.yaml
+```
+ 
+тут же меняем путь к ```genesis``` файлу 
 
-Создайте сервисный фаил
+```/root/sui/genesis.blob```
+
+Меняем IP на 0.0.0.0
+
+Создаем сервисный фаил
 
 ```
 sudo tee /etc/systemd/system/sui-node.service > /dev/null <<EOF 
@@ -126,7 +132,8 @@ LimitNOFILE=65535
 WantedBy=multi-user.target 
 EOF
 ```
-Рестартнуть Ноду
+
+Рестартнем ноду
 
 ```
 sudo systemctl enable sui-node
@@ -136,8 +143,9 @@ sudo systemctl daemon-reload
 ```
 ```
 sudo systemctl restart sui-node
-
 ```
+
+Проверить логи
 ```
 journalctl -u sui-node.service -f
 ```
