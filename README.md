@@ -50,7 +50,7 @@
    
     
      
-  Форкним [Репозиторий Sui](https://github.com/MystenLabs/sui)
+  Форкаем [Репозиторий Sui](https://github.com/MystenLabs/sui)
   
   
   [![image.png](https://i.postimg.cc/gkMwLbjP/image.png)](https://postimg.cc/crn1PjfD)
@@ -148,10 +148,11 @@ sudo systemctl daemon-reload
 sudo systemctl restart sui-node
 ```
 
-Проверить логи
+Проверяем логи
 ```
 journalctl -u sui-node.service -f
 ```
+
 
 
 
