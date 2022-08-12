@@ -32,12 +32,12 @@
     cmake 
     ```
      
-  Форкните репозиторий Sui https://github.com/MystenLabs/sui [репозиторий Sui](#https://github.com/MystenLabs/sui)
+  Форкните [Репозиторий Sui](https://github.com/MystenLabs/sui)
   [![image.png](https://i.postimg.cc/gkMwLbjP/image.png)](https://postimg.cc/crn1PjfD)
   
-  [https://github.com/MystenLabs/sui][dill]
+ 
 
-[Репозиторий](https://github.com/MystenLabs/sui)
+
    
 
 
