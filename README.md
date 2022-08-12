@@ -119,7 +119,8 @@ nano /root/sui/fullnode.yaml
 Меняем IP на 0.0.0.0
 
 В итоге должно получиться следующее:
-[![image.png](https://i.postimg.cc/yYPwg0Z5/image.png)](https://postimg.cc/HVrSFc34)
+
+[![image.png](https://i.postimg.cc/FHk8P8qt/image.png)](https://postimg.cc/yDBLxQsn) 
 
 
 Создаем сервисный фаил
