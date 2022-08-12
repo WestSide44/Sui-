@@ -118,6 +118,10 @@ nano /root/sui/fullnode.yaml
 
 Меняем IP на 0.0.0.0
 
+В итоге должно получиться следующее:
+[![image.png](https://i.postimg.cc/yYPwg0Z5/image.png)](https://postimg.cc/HVrSFc34)
+
+
 Создаем сервисный фаил
 
 ```
@@ -154,6 +158,50 @@ journalctl -u sui-node.service -f
 ```
 
 
+## Обновление
+
+ Остановите ноду
+ 
+ ```
+ systemctl stop suid
+ ```
+ 
+ 
+ Удалите старую базу данных ```suidb```:
+
+```
+rm -rf /root/sui/suidb/
+```
+
+Удалите старый генезис и установите новый: 
+
+```
+wget -O /root/.sui/genesis.blob https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
+```
+
+Обновите папку ```sui```
+```
+cd sui
+```
+```
+git fetch upstream
+```
+```
+git stash
+```
+```
+git checkout -B devnet --track upstream/devnet
+```
+
+скомпилируйте новый бинарник и запустите ноду
+```
+cargo run --release --bin sui-node -- --config-path /root/.sui/fullnode.yaml
+```
+
+Проверьте версию
+```
+sui --version
+```
 
 
 
