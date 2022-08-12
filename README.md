@@ -29,11 +29,11 @@
     libssl-dev \
     pkg-config \
     libclang-dev \
-    cmake
-     ```
+    cmake 
+    ```
      
-    Форкните репозиторий Sui https://github.com/MystenLabs/sui [репозиторий Sui](#я-https://github.com/MystenLabs/sui)
-   [![image.png](https://i.postimg.cc/gkMwLbjP/image.png)](https://postimg.cc/crn1PjfD)
+  Форкните репозиторий Sui https://github.com/MystenLabs/sui [репозиторий Sui](#https://github.com/MystenLabs/sui)
+  [![image.png](https://i.postimg.cc/gkMwLbjP/image.png)](https://postimg.cc/crn1PjfD)
 
    
 
