@@ -42,7 +42,8 @@
     
    Установите ```Rust```
     
-     ```
+    
+    ```
       . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
      ```
    
@@ -54,7 +55,8 @@
   [![image.png](https://i.postimg.cc/gkMwLbjP/image.png)](https://postimg.cc/crn1PjfD)
   
   
-Клонируем свой личный форк репозитория Sui на свой пк 
+Клонируем свой репозиторий 
+
 Вместо ```YOUR-GITHUB-USERNAME``` Вставляем свой ник из Гитхаба
   
  ```
