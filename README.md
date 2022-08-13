@@ -129,7 +129,7 @@ nano /root/.sui/fullnode.yaml
 
 ```/root/sui/genesis.blob```
 
-Меняем IP на 0.0.0.0
+Открываем порты , меняем IP на ```0.0.0.0```
 
 Сохраняем изменения и выходим из редактора ```CTRL+O ``` > ```ENTER``` > ```CTRL+X```
 
@@ -172,6 +172,38 @@ sudo systemctl restart sui-node
 ```
 journalctl -u sui-node.service -f
 ```
+
+
+## Регистрация ноды
+
+Воодим данную команду и получаем RPC ноды
+
+```
+echo "http://`wget -qO- eth0.me`:9000/"
+```
+полученную ссылку вбиваем в своем браузере
+и чекаем вывод , если есть такая надпись значит все норм
+
+```Used HTTP Method is not allowed. POST or OPTIONS is required```
+
+Дальше вам неоходимо подтвердить свою ноду в дискорде
+
+переходим в [Дискорд](https://discord.gg/sui) , заходим в канал ```#node-ip-application```
+
+и вбиваем RPC ноды , пример: ```http://206.81.3.149:9000/```
+
+
+## Мониторинг ноды
+
+Для просмотра работоспособности ноды переходим в [чеккер](https://node.sui.zvalid.com/)
+
+и вбиваем свои данные
+
+[![111.png](https://i.postimg.cc/mktGJmc1/111.png)](https://postimg.cc/YLKVmfzt)
+
+После успешного подключения обращаем внимание на статус ноды (Node Health)  , должно быть ```"ok"```
+кроме того смотрим на изменение показателей: транзакции , объекты , rpc если эти показатели изменяются значит все в порядке
+
 
 
 ## Обновление
@@ -218,6 +250,7 @@ cargo run --release --bin sui-node -- --config-path /root/.sui/fullnode.yaml
 ```
 sui --version
 ```
+
 
 
 
