@@ -44,8 +44,13 @@
     
     
   ```
-  . <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/installers/rust.sh)
-   ```
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  ```
+  
+  
+ ```
+ bsource "$HOME/.cargo/env"
+ ```
   
    
     
