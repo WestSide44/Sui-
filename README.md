@@ -160,11 +160,7 @@ EOF
 
 ```
 sudo systemctl enable sui-node
-```
-```
 sudo systemctl daemon-reload 
-```
-```
 sudo systemctl restart sui-node
 ```
 
