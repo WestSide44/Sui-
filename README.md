@@ -105,7 +105,7 @@
  curl -fLJO https://github.com/MystenLabs/sui-genesis/raw/main/devnet/genesis.blob
  ```
  
-Компилируем бинарные файлы (занимает долгое время) 
+Компилируем бинарные файлы и запускаем ноду (занимает долгое время) 
  
  ```
 cargo run --release --bin sui-node -- --config-path fullnode.yaml
