@@ -123,6 +123,8 @@ nano /root/sui/fullnode.yaml
 
 Меняем IP на 0.0.0.0
 
+Сохраняем изменения и выходим из редактора ```CTRL+O ``` > ```ENTER``` > ```CTRL+X```
+
 В итоге должно получиться следующее:
 
 [![image.png](https://i.postimg.cc/FHk8P8qt/image.png)](https://postimg.cc/yDBLxQsn) 
