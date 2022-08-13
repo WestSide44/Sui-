@@ -110,6 +110,14 @@
  ```
 cargo run --release --bin sui-node -- --config-path fullnode.yaml
  ```
+Если после предыдущего шага возникла ошибка то выполняем следующие команды:
+
+```
+git pull
+```
+```
+git checkout 8a29394515eaf520cc6fa54bca8ce0c22db0dbc8
+```
 
 Редактируем ```fullnode.yaml```
 
