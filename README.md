@@ -122,7 +122,7 @@ git checkout 8a29394515eaf520cc6fa54bca8ce0c22db0dbc8
 Редактируем ```fullnode.yaml```
 
 ```
-nano $HOME/sui/fullnode.yaml
+nano /root/sui/fullnode.yaml
 ```
  
 меняем путь к ```genesis``` файлу 
