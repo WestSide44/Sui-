@@ -108,7 +108,7 @@
 Компилируем бинарные файлы и запускаем ноду (занимает долгое время) 
  
  ```
-cargo run --release --bin sui-node -- --config-path fullnode.yaml
+cargo run --release --bin sui-node -- --config-path /root/.sui/fullnode.yaml
  ```
 Если после предыдущего шага возникла ошибка то выполняем следующие команды:
 
@@ -116,7 +116,7 @@ cargo run --release --bin sui-node -- --config-path fullnode.yaml
 git pull
 ```
 ```
-git checkout 8a29394515eaf520cc6fa54bca8ce0c22db0dbc8
+git checkout a23835d7f6e425ecf026c16e9d07bfc7b93115c4
 ```
 
 Редактируем ```fullnode.yaml```
@@ -207,7 +207,7 @@ echo "http://`wget -qO- eth0.me`:9000/"
  Остановите ноду
  
  ```
- systemctl stop suid
+ sudo systemctl stop sui-node
  ```
  
  
@@ -246,6 +246,14 @@ cargo run --release --bin sui-node -- --config-path /root/.sui/fullnode.yaml
 ```
 sui --version
 ```
+если не указывает актуальную версию:
+```
+cd sui
+```
+```
+git log
+```
+
 
 
 
