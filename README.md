@@ -234,7 +234,7 @@ git fetch upstream
 git stash
 ```
 ```
-git checkout -B devnet --track upstream/devnet
+git checkout devnet-0.8.0
 ```
 
 скомпилируйте новый бинарник и запустите ноду
@@ -246,7 +246,7 @@ cargo run --release --bin sui-node -- --config-path /root/.sui/fullnode.yaml
 ```
 sui --version
 ```
-если не указывает актуальную версию:
+Или
 ```
 cd sui
 ```
