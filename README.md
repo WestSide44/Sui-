@@ -234,7 +234,7 @@ git fetch upstream
 git stash
 ```
 ```
-git checkout devnet-0.8.0
+git checkout -B devnet --track upstream/devnet
 ```
 
 скомпилируйте новый бинарник и запустите ноду
